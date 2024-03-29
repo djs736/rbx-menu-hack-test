@@ -63,7 +63,7 @@ float.Text = "Float"
 float.TextColor3 = Color3.fromRGB(0, 0, 0)
 float.TextSize = 14.000
 
-ws500.Name = "ws 500"
+ws500.Name = "ws500"
 ws500.Parent = Main
 ws500.BackgroundColor3 = Color3.fromRGB(55, 59, 255)
 ws500.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -113,7 +113,7 @@ local function PBIKKE_fake_script() -- sit.sit
 	local char = player.Character
 	local humanoid = char:WaitForChild("Humanoid")
 	
-	script.Parent.Activated:Connect(function()
+	script.Parent.djsmenu.Main.sit.Activated:Connect(function()
 		humanoid.Sit = true
 	end)
 end
@@ -125,7 +125,7 @@ local function UHPZ_fake_script() -- float.float
 	local char = player.Character
 	local humanoid = char:WaitForChild("Humanoid")
 	
-	script.Parent.Activated:Connect(function()
+	script.Parent.djsmenu.Main.float.Activated:Connect(function()
 		humanoid.HipHeight = 10
 	end)
 end
@@ -138,7 +138,7 @@ local function HRIGGZC_fake_script() -- ws500.Walkspeed
 	local char = player.Character
 	local humanoid = char:WaitForChild("Humanoid")
 	
-	script.Parent.Activated:Connect(function()
+	script.Parent.djsmenu.Main.ws500.Activated:Connect(function()
 		humanoid.WalkSpeed = 500
 		humanoid.JumpPower = 500
 	end)
@@ -152,15 +152,15 @@ local function UQJGTB_fake_script() -- noclip.LocalScript
 	
 	local isnoclipping = false --Sets the no-clip to initialy false
 	
-	script.Parent.MouseButton1Click:Connect(function()
+	script.Parent.djsmenu.Main.noclip.MouseButton1Click:Connect(function()
 		if isnoclipping== true then
 			isnoclipping=false
-			script.Parent.Text = "No-Clip [OFF]" --Changes the text to OFF
-			script.Parent.BackgroundColor3 = Color3.new(1, 0, 0) --Bright Red Color
+			script.Parent.djsmenu.Main.noclip.Text = "No-Clip [OFF]" --Changes the text to OFF
+			script.Parent.djsmenu.Main.noclip.BackgroundColor3 = Color3.new(1, 0, 0) --Bright Red Color
 		else	
 			isnoclipping=true
-			script.Parent.Text = "No-Clip [ON]" --Changes the text to ON
-			script.Parent.BackgroundColor3 = Color3.new(0, 1, 0) --Bright Green Color
+			script.Parent.djsmenu.Main.noclip.Text = "No-Clip [ON]" --Changes the text to ON
+			script.Parent.djsmenu.Main.noclip.BackgroundColor3 = Color3.new(0, 1, 0) --Bright Green Color
 		end
 	end)
 	
@@ -180,7 +180,7 @@ coroutine.wrap(UQJGTB_fake_script)()
 local function RJSXVCL_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
-	local frame = script.Parent.Parent.Parent:WaitForChild('Main')
+	local frame = script.Parent.djsmenu.Main:WaitForChild('Main')
 	script.Parent.MouseButton1Click:connect(function()
 		frame.Visible = not frame.Visible
 		print("buttonopen/close")
